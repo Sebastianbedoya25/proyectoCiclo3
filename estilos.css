@@ -1,3 +1,23 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: #24252A;
+}
+
+body {
+    background: #50aed3;
+    font-family: 'calibri';
+}
+
+header {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
 .titulo{
     background-color: coral;
     color:white;
@@ -5,4 +25,14 @@
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 300%;
     text-align: center;
+}
+
+#landing_logo {
+    width: 190px;
+    float: left;
+}
+
+#horizontal_navbar {
+    float: right;
+
 }
