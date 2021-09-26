@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Corporación Truchas - Registro</title>
+        <link rel="stylesheet" href="estilos.css">
+
+        <script
+            
+            src="JS/validaciones.js">
+        
+        </script>
+
+        
+    </head>
+    <body>
+
+        <header>
+            
+            <nav id="horizontal_navbar">
+            <img id="landing_logo" src="./imagenes/logo.jpg.jpg" alt="">
+            </nav>
+
+        </header>
+
+        <br><br>
+        <h2><b>Registro</b></h2><br>
+        <h3>Corporación Deportiva Truchas de Natación</h3>
+        <br><br>
+
+        
+        <form id="form_nuevo_usuario" onsubmit="return validar_nombre_usuario();">
+            <center>
+            <table width="20%">
+                <tr>
+                    <td><label for="Usuario">Usuario:</label></td> 
+                    <td><input type="text" id="dato_nombre_usuario" ></td>
+                    
+                </tr>  
+        
+                <tr>
+                    <td><label for="Edad">Edad:</label></td> 
+                    <td><input type="number" min="12" max="110" id="dato_edad_usuario" ></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="Contrasena">Contraseña:</label></td> 
+                    <td><input type="password" id="dato_contrasena" ></td>
+                </tr>                
+            </table>
+
+                <br><br>
+                <button type="submit" id="enviar_registro" style="background-color:#FF9D6E">Enviar</button>
+                <button type="reset" id="restablecer_registro" style="background-color:#FF9D6E">Restablecer</button>
+            </center>
+        </form>
+       
+    </body>
+</html>
