@@ -1,17 +1,16 @@
+let registros = []
+
 function validar_nombre_usuario(string){
 
-    var string = document.getElementById("dato_nombre_usuario").value
+    var string = document.getElementById("dato_nombre_usuario").value;
     const buscar = /^([A-Z]{1}[a-z]+)((\s[A-Z]{1}[a-z]+)?)$/;
     
     if(buscar.test(string) == true){
-        console.log(buscar.test(string));
-        alert("Usuario válido");
         return true;
     }
     else{
-         console.log(buscar.test(string));
-         alert("El usuario no es válido");
-         return false;
+        alert("Ingrese un nombre de usuario válido");
+        return false;
     }     
 }
 
@@ -21,12 +20,9 @@ function validar_contrasena(string){
     const patron = /^[A-Za-z0-9]+$/;
     
     if ((patron.test(string) == true) && (string!=null) && (string.length>=6) ) {
-        alert("Contraseña correcta");
-        console.log("Contraseña correcta");
         return true;
     }else{
-        console.log("Contraseña incorrecta");
-        alert("Contraseña incorrecta");
+        alert("Ingrese una contraseña correcta");
         return false;
     }
 }
@@ -36,7 +32,6 @@ function validar_edad_usuario(edad) {
     var numeros = /^[0-9]+$/;
     if(numeros.test(edad) == true){
         if(edad > 13 && edad < 110) {
-            alert("El dato de la edad es válido")
             return true;
             
         }
@@ -52,6 +47,25 @@ function validar_edad_usuario(edad) {
     }
 }
 
+function agregarRegistro(){
+    if(validar_nombre_usuario() && validar_contrasena() && validar_edad_usuario()){
+        let user = {
+            usuario: document.getElementById("dato_nombre_usuario").value,
+            edad: document.getElementById("dato_edad_usuario").value,
+            contrasena: document.getElementById("dato_contrasena").value
+        };
+        registros.push(user);
+        form_nuevo_usuario.reset();
+    }
+}
+
+function OrdenarArreglo(arreglo){
+
+}
+
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
 module.exports.validar_contrasena = validar_contrasena;
 module.exports.validar_edad_usuario = validar_edad_usuario;
+module.exports.registros = registros;
+module.exports.agregarRegistro = agregarRegistro;
+module.exports.OrdenarArreglo = OrdenarArreglo;

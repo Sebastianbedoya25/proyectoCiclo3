@@ -18,20 +18,21 @@
         <header>
             
             <nav id="horizontal_navbar">
-            <img id="landing_logo" src="./imagenes/logo.jpg.jpg" alt="Logo Corporación Truchas">
+            <a href="index.html"><img id="landing_logo" src="./imagenes/logo.jpg.jpg" alt="Logo Corporación Truchas"></a>
             </nav>
 
         </header>
 
-        <br><br>
-        <h2><b>Registro</b></h2><br>
-        <h3>Corporación Deportiva Truchas de Natación</h3>
-        <br><br>
+        <br><br><br><br>
 
         
-        <form id="form_nuevo_usuario" onsubmit="validar_nombre_usuario(); validar_contrasena(); validar_edad_usuario();">
+        <form id="form_nuevo_usuario" >
+            <br><br>
+            <h2><b>Registro</b></h2><br>
+            <h3>Corporación Deportiva Truchas de Natación</h3>
+            <br><br>
             <center>
-            <table width="20%">
+            <table>
                 <tr>
                     <td><label for="Usuario">Usuario:</label></td> 
                     <td><input type="text" id="dato_nombre_usuario" ></td>
@@ -45,14 +46,15 @@
                 
                 <tr>
                     <td><label for="Contrasena">Contraseña:</label></td> 
-                    <td><input type="password" id="dato_contrasena" ></td>
+                    <td><input type="password" id="dato_contrasena"></td>
                 </tr>                
             </table>
 
                 <br><br>
-                <button type="submit" id="enviar_registro" style="background-color:#FF9D6E">Enviar</button>
-                <button type="reset" id="restablecer_registro" style="background-color:#FF9D6E">Restablecer</button>
+                <button type="button" id="enviar_registro" onclick="agregarRegistro();">Enviar</button>
+                <button type="reset" id="restablecer_registro">Restablecer</button>
             </center>
+            <br><br>
         </form>
        
     </body>
