@@ -4,7 +4,6 @@ function validar_nombre_usuario(string){
 
     var string = document.getElementById("dato_nombre_usuario").value;
     const buscar = /^([A-Z]{1}[a-z]+)((\s[A-Z]{1}[a-z]+)?)$/;
-    
     if(buscar.test(string) == true){
         return true;
     }
@@ -18,7 +17,6 @@ function validar_contrasena(string){
     
     var string = document.getElementById("dato_contrasena").value;
     const patron = /^[A-Za-z0-9]+$/;
-    
     if ((patron.test(string) == true) && (string!=null) && (string.length>=6) ) {
         return true;
     }else{
@@ -33,7 +31,6 @@ function validar_edad_usuario(edad) {
     if(numeros.test(edad) == true){
         if(edad > 13 && edad < 110) {
             return true;
-            
         }
         else {
             alert("La edad debe estar entre 13 y 110 años")
@@ -43,7 +40,6 @@ function validar_edad_usuario(edad) {
     else {
         alert("La edad debe ser numérica");
         return false;
-
     }
 }
 
@@ -57,12 +53,6 @@ function agregarRegistro(){
         registros.push(user);
         form_nuevo_usuario.reset();
         console.clear();
-        for (var i=0; i<registros.length;i++){
-            
-            console.log("Posición "+i);
-            console.log("{ Usuario: "+registros[i].usuario+" - Edad: "+registros[i].edad+" - Contraseña: "+registros[i].contrasena+" }\n");
-        }
-        OrdenarArreglo(registros);
     }
 }
 
@@ -70,14 +60,6 @@ function OrdenarArreglo(arreglo){
     arreglo = registros;
     let user;
     arreglo.sort(function(a, b){return a.edad - b.edad});
-    
-    console.log("Desde Ordenar arreglo");
-    for (var i=0; i<registros.length;i++){
-            
-        console.log("Posición "+i);
-        console.log("{ Usuario: "+registros[i].usuario+" - Edad: "+registros[i].edad+" - Contraseña: "+registros[i].contrasena+" }\n");
-    }
-    return arreglo;
 }
 
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
