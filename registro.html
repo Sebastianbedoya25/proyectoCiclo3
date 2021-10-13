@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Corporación Truchas - Registro</title>
+        <title>Registro</title>
         <link rel="stylesheet" href="estilos.css">
 
         <script
@@ -18,7 +18,7 @@
         <header>
             
             <nav id="horizontal_navbar">
-            <img id="landing_logo" src="./imagenes/logo.jpg.jpg" alt="">
+            <img id="landing_logo" src="./imagenes/logo.jpg.jpg" alt="Logo Corporación Truchas">
             </nav>
 
         </header>
@@ -29,7 +29,7 @@
         <br><br>
 
         
-        <form id="form_nuevo_usuario" onsubmit="return validar_nombre_usuario();">
+        <form id="form_nuevo_usuario" onsubmit="validar_nombre_usuario(); validar_contrasena(); validar_edad_usuario();">
             <center>
             <table width="20%">
                 <tr>
