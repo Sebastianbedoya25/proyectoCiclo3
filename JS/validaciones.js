@@ -56,11 +56,28 @@ function agregarRegistro(){
         };
         registros.push(user);
         form_nuevo_usuario.reset();
+        console.clear();
+        for (var i=0; i<registros.length;i++){
+            
+            console.log("Posición "+i);
+            console.log("{ Usuario: "+registros[i].usuario+" - Edad: "+registros[i].edad+" - Contraseña: "+registros[i].contrasena+" }\n");
+        }
+        OrdenarArreglo(registros);
     }
 }
 
 function OrdenarArreglo(arreglo){
-
+    arreglo = registros;
+    let user;
+    arreglo.sort(function(a, b){return a.edad - b.edad});
+    
+    console.log("Desde Ordenar arreglo");
+    for (var i=0; i<registros.length;i++){
+            
+        console.log("Posición "+i);
+        console.log("{ Usuario: "+registros[i].usuario+" - Edad: "+registros[i].edad+" - Contraseña: "+registros[i].contrasena+" }\n");
+    }
+    return arreglo;
 }
 
 module.exports.validar_nombre_usuario = validar_nombre_usuario;
