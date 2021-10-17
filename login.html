@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Iniciar sesión</title>
+        <link rel="stylesheet" href="estilos.css">
+
+        <script
+            
+        src="JS/login.js">
+    
+    </script>
+
+        
+    </head>
+    <body>
+
+        <header>
+            
+            <nav id="horizontal_navbar">
+            <a href="index.html"><img id="landing_logo" src="./imagenes/logo.jpg.jpg" alt="Logo Corporación Truchas"></a>
+            </nav>
+
+        </header>
+
+        <br><br><br><br>
+
+        
+        <form id="form_iniciar_sesion" >
+            <br><br>
+            <h2><b>Iniciar sesión</b></h2><br>
+            <h3>Corporación Deportiva Truchas de Natación</h3>
+            <br><br>
+            <center>
+            <table>
+                <tr>
+                    <td><label for="Usuario">Usuario:</label></td> 
+                    <td><input type="text" id="in_login_username" ></td>
+                    
+                </tr>  
+        
+                <tr>
+                    <td><label for="Contrasena">Contraseña:</label></td> 
+                    <td><input type="password" id="in_login_password"></td>
+                </tr>         
+                
+                <tr>
+                    <td><label for="Captcha">Captcha:</label></td> 
+                    <td><input type="text" id="in_login_captcha" placeholder="Bogotá"></td>
+                    
+                </tr>      
+            </table>
+
+                <br><br>
+                <button type="button" id="enviar_registro" onclick="iniciar_sesion();">Iniciar sesión</button>
+                <button type="reset" id="restablecer_registro">Restablecer</button>
+            </center>
+            <br><br>
+        </form>
+
+
+       
+    </body>
+</html>

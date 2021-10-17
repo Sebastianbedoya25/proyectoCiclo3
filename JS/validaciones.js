@@ -59,7 +59,6 @@ let registros = []
 
     function OrdenarArreglo(arreglo){
         arreglo = registros;
-        let user;
         arreglo.sort(function(a, b){return a.edad - b.edad});
         return arreglo;
     }
